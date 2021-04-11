@@ -1,0 +1,59 @@
+{
+  "name": "doctor",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.7.4",
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "emailjs-com": "^2.6.4",
+    "google-maps-react": "^2.0.6",
+    "popper.js": "^1.16.1",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.5.0",
+    "react-dom": "^17.0.1",
+    "react-messenger-customer-chat": "^0.8.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "resolve-url-loader": "^3.1.2",
+    "web-vitals": "^1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.0.0-beta2",
+    "bootstrap-loader": "^3.0.4",
+    "express": "^4.17.1",
+    "express-pino-logger": "^6.0.0",
+    "jquery": "^3.5.1",
+    "node-env-run": "^4.0.2",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "pino-colada": "^2.1.0",
+    "tether": "^1.4.7"
+  }
+}

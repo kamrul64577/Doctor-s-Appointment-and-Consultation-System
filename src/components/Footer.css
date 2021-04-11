@@ -1,0 +1,25 @@
+
+.horizontal-role{
+    width: 50%;
+}
+.f-mobile{
+    padding-bottom: 15px;
+    width: 15%;
+    border-bottom: 2px solid grey;
+}
+.sub-Footer{
+    background-color: #0B0A0A;
+    
+}
+.sub-footer-title{
+    text-align: center;
+    padding:10px 0;
+    color: rgb(194, 186, 186);
+}
+
+
+#contact-header-section{
+    background-image: url('../images/contact.jpg');
+    background-size: cover;
+    background-position: center top;
+}
