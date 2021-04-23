@@ -5,30 +5,32 @@ import Axios from 'axios';
 
 export default function IbnsinaSp() {
 
-    // const [name, setName ] = useState("");
-    // const [hname, setHname ] = useState("");
-    // const [email, setEmail ] = useState("");
+    const [name, setName ] = useState("");
+    const [hname, setHname ] = useState("");
+    const [email, setEmail ] = useState("");
+
+    const [newhname, setNewHname] = useState('');
 
     const [Specialist, setSpecialist] = useState([]);
 
-    // const addSpecialist = () => {
-    //     Axios.post('http://localhost:3001/ibnsinaSp', {
+    const addSpecialist = () => {
+        Axios.post('http://localhost:3001/ibnsinaSp', {
          
-    //         name : name,
-    //         hname: hname,
-    //         email : email
+            name : name,
+            hname: hname,
+            email : email
 
-    //     }).then(() => {
-    //         setSpecialist([
-    //           ...Specialist,
-    //           {
-    //             name: name,
-    //             hname : hname,
-    //             email : email
-    //           },
-    //         ]);
-    //       });
-    //     };
+        }).then(() => {
+            setSpecialist([
+              ...Specialist,
+              {
+                name: name,
+                hname : hname,
+                email : email
+              },
+            ]);
+          });
+        };
       
         const getSpecialist = () => {
           Axios.get("http://localhost:3001/ibnsinaSp").then((response) => {
@@ -39,7 +41,7 @@ export default function IbnsinaSp() {
     return (
         <div>
             <div className="container py-5">
-                {/* <label>Name</label> <br/>
+                <label>Name</label> <br/>
                 <input type="text" placeholder="name" 
                     onChange={(event) => {
                         setName(event.target.value);
@@ -55,9 +57,9 @@ export default function IbnsinaSp() {
                 <input type="email" placeholder="email" 
                     onChange={(event) => {
                         setEmail(event.target.value);
-                    }}/><br/><br/> */}
+                    }}/><br/><br/>
 
-                {/* <input onClick={addSpecialist} type="submit" value="Add Speacialist" /> */}
+                <input onClick={addSpecialist} type="submit" value="Add Speacialist" />
                 <button onClick={getSpecialist}>Show Employees</button>
                 
                 {Specialist.map((val,key) =>{
@@ -66,6 +68,13 @@ export default function IbnsinaSp() {
                                     <h1>{val.name}</h1>
                                     <h2>{val.hname}</h2>
                                     <h3>{val.email}</h3>
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="abcd" 
+                                    onChange={(event) => {
+                                        setNewHname(event.target.value);
+                                    }} />
+                                    <button>Update</button>
                                 </div>
 
                             </div>

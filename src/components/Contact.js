@@ -17,6 +17,10 @@ export default function ContactUs() {
         e.target.reset()
     }
 
+   const onButtonClickHandler = () => {
+        window.alert('Thank You For Contact With Us')
+      };
+
     return(
         <>
             <div id="contact-header-section" >
@@ -43,7 +47,8 @@ export default function ContactUs() {
                                     <textarea className="form-control" id="" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
                                 </div>
                                 <div className="col-lg-8 pt-3 offset-lg-3">
-                                    <input  type="submit" className="btn btn-success" value="Send Message"></input>
+                                    <input onClick={onButtonClickHandler}  type="submit" className="btn btn-success" value="Send Message"></input>
+                                   
                                 </div>
                             </div>
                         </form>
