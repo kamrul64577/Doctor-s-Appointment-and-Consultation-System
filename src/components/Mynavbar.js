@@ -22,6 +22,7 @@ export default class Mynavbar extends Component {
                         <Navbar.Collapse id="basic-navbar-nav"> 
                         <Nav className="navitems">
                             <NavLink exact className="navlink" activeStyle={{color:"lightblue"}} to="/">Home</NavLink>
+                            <NavLink exact className="navlink" activeStyle={{color:"lightblue"}} to="/specialist">Specialist</NavLink>
                             <NavLink className="navlink" activeStyle={{color:"lightblue"}} to="/contact">Contact</NavLink>
                             <NavLink className="navlink" activeStyle={{color:"lightblue"}} to="/about">About</NavLink>
                             

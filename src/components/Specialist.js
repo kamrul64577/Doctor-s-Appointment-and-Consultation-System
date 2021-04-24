@@ -5,33 +5,36 @@ import { Link } from 'react-router-dom';
 
 
 
- export default function HospitalName() {
-        const [Hospitallist, setHospitallist] = useState([]);
+ export default function Specialist() {
+        const [specialist, setSpecialist] = useState([]);
         
       
-        const getHospitallist = () => {
-          Axios.get("http://localhost:3001/HospitalName").then((response) => {
-            setHospitallist(response.data);
+        const getSpecialist = () => {
+          Axios.get("http://localhost:3001/Specialist").then((response) => {
+            setSpecialist(response.data);
           });
         };
+
+        <button onclick="myFunction()"> Hello </button>
 
     return (
         <div>
             <div className="container ">
                 
               
-               {getHospitallist()}
-                {Hospitallist.map((val,key) =>{
+               {getSpecialist()}
+                {specialist.map((val,key) =>{
                     return <div>
-                        
+                            
                             <div className="hospital-information mt-5 ">
                             <Card className="hospital-card text-center my-3">
                                 <Card.Body>
                                     <Card.Title>
-                                        <h3><Link className="hospital-name" to="/specialist">{val.hname}</Link></h3>
+                                        <h3><Link className="hospital-name" to="/ibnsina-category/{val.H-id}">{val.name}</Link></h3>
                                     </Card.Title>
                                     <Card.Text>
-                                        <p>Location : {val.hlocation}</p>
+                                        <p>Location : {val.h_id}</p>
+                                        
                                         
                                     </Card.Text>
                                 </Card.Body>
